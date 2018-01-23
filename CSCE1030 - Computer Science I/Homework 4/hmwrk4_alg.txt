@@ -1,0 +1,6 @@
+Get the file name as input
+
+loop through the text
+loop through the key
+write 65 + (text+key) % 26
+if lower write 97 + (text+key) % 26

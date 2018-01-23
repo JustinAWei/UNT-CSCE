@@ -1,0 +1,29 @@
+
+/*
+============================================================================
+Program Name : homework5.cpp
+Author : Justin Wei
+Instructor: David Keathley
+Course: CSCE 1030
+Date: 11/23/2016
+Description : This progrom implements the beginings of a game, "1030 Crush"
+============================================================================
+*/
+
+main:
+  1. display_student_info
+  2. print game intro
+  3. initialize board
+  4. print board
+
+  1. display_student_info:
+    cout statements
+
+  2. print game intro
+    cout statements
+
+  3. initialize board
+    use two for loops to traverse the array and the random number generator to fill the array with characters 33-38 inclusive
+
+  4. print board:
+  use two for loops to traverse the array and use cout statements to display each symbol

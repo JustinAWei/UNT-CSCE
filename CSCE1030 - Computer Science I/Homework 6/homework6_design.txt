@@ -1,0 +1,36 @@
+/*
+   ============================================================================
+   Program Name : homework6.cpp
+   Author : Justin Wei
+   Instructor: David Keathley
+   Course: CSCE 1030
+   Date: 12/4/2016
+   Description : Development of the basic working game "CSCE1030 Crush"
+   ============================================================================
+ */
+
+print student info
+print game intro
+
+initialize board
+
+for 12 times:
+each turn:
+  get input for coordinates (with error checking)
+  get input for direction with error checking
+
+  check if input for coordinates is r0
+    if so, reinitialize board and continue to next turn
+
+  if dir is h
+    search left/right for matching symbols
+    if theres a match  of more than 3 symbols then replace those symbols with randomly generated ones
+
+  if dir is v
+    search up/down for matching symbols
+    if theres a match  of more than 3 symbols then replace those symbols with randomly generated ones
+
+  print the score of the match
+  print the total game score
+
+print ending Message

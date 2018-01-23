@@ -1,0 +1,147 @@
+/*
+Name: Justin Wei
+Email: JustinWei@my.unt.edu
+Course: CSCE1004
+Instructor: Keathly
+Date: 2/10/17
+Description: Design file
+*/
+
+STRUCTURES:
+Students
+  size of student linkedlist
+  head and tail student of linkedlist
+  catalogues student structs
+
+Student
+  contains student id and name
+  pointer to next student element in linkedlist
+
+Courses
+  size of course linkedlist
+  head and tail course of linkedlist
+  catalogues course structs
+
+Course
+  contains course id and name
+  pointer to next course element in linkedlist
+
+Enrollments
+  size of enrollment linkedlist
+  head and tail enrollment of linkedlist
+  catalogues enrollment structs
+
+Enrollment
+  contains enrollment id
+  references to student and course
+  a grades manager struct
+  pointer to next enrollment element in linkedlist
+
+Grades
+  contains size of grades linkedlist
+  head and tail of grades linkedlist
+
+Grade
+  contains grade value
+  grade pointer to next grade in linkedlist
+
+
+FUNCTIONS:
+int main
+  print student info
+  while user still wants to continue
+    prompt choice
+    switch choice
+    prompt continue?
+
+void add(Student * student);
+  add one to students size
+  add student to students linkedlist
+
+void add(Course * course);
+  add one to courses size
+  add course to courses linkedlist
+
+void add(int student_id, int course_id, int count, int * grade_array)
+  find enrollment that matches studentid and courseid
+  add grades in grade_array to enrollment grades
+
+void add(int student_id, int course_id);
+  find student with Studentid
+  find course with courseid
+  create enrollment with student and course
+  add enrollment to enrollments linkedlist
+
+void print_students(int course_id);
+  for each enrollment with courseid
+    print students
+
+void print_grades(int student_id, int course_id);
+  find enrollment with studentid and courseid
+    for each grade in enrollment grades
+      print grade
+
+void print_all_students();
+  for each student in students
+    print id and name
+
+void print_all_courses();
+  for each course in courses
+    print id and course name
+
+float average(int student_id, int course_id);
+  find enrollment with studentid and courseid
+    for each grade in enrollment grades
+      add grade to sum
+    return sum / grades size
+
+float average(int course_id);
+  for each enrollment in enrollments
+    find enrollment with courseid
+    add average(studentid, courseid) to sum
+    add 1 to count
+  return sum / count
+
+void store_gradebook(string filename);
+  for each student
+    print student
+
+  for each course
+    print course
+
+    for each enrollment
+      find enrollment with courseid
+        print student
+
+        for each grade
+          print grade
+        print average
+
+void load_gradebook(string filename);
+  while input "TYPE: ID NAME"
+    case student:
+      add student
+
+    case course:
+      add course
+
+    case Enrollment
+      add enrollment
+
+      for each grade
+        add grade
+
+void print_menu();
+  print menu
+
+void print_student_info();
+  print name, email, euid, course, instructor
+
+void input_integer();
+  do while error
+    get int
+    error check
+
+void clean_up();
+  deallocate all memory
+  

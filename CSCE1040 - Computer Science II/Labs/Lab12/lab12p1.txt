@@ -1,0 +1,3 @@
+Before I changed the function to virtual, the derived class called the parent version of Payment(), just returning sal (1500).
+When I changed the function to virtual, the derived class called it's own version of Payment(), returning sal * inc (2500).
+Because the derived keyword uses runtime-binding, it is able to call the derived function from a parent pointer to a derived class.

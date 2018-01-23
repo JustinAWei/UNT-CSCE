@@ -1,0 +1,52 @@
+/*
+============================================================================
+Program Name : homework3.cpp
+Author : Justin Wei
+Instructor: David Keathley
+Course: CSCE 1030
+Date: 11/7/2016
+Description : The program gets the input of two bases of a trapezoid as well as
+a character symbol to draw a trapezoid. Returns the calculated area of the trapezoid.
+============================================================================
+*/
+
+Algorithmic design
+
+Get the input of an odd integer between 1-21
+validate base1
+Keep asking for input if invalid
+
+Get the input of an odd integer between 3-23
+validate base2
+Keep asking for input if invalid
+
+Get the input of a character
+
+Draw the trapezoid
+
+Calculate the area by using the area formula.
+
+
+functions:
+
+{
+Validate base 1
+check if odd
+check range
+
+Validate base 2
+check if odd
+check range
+check if greater than base 1
+}
+combine these into one function, "validate_base," that only checks odd and range.
+can input base1 as minimum for range of base2.
+
+area
+1/2 * (b1 + b2) * h
+
+draw trapezoid
+Draw rows of the character, increasing by two each time starting from the first to the second integer.
+Calculate the difference divided by two to determine the number of rows.
+Add that many spaces for the first row, then print the row of characters
+decrease the number of spaces by one every time you print a row

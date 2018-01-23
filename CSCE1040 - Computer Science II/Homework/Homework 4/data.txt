@@ -1,0 +1,25 @@
+9
+ID | Name | Address | Phone | Status | Fine Balance | Num Borrowed |
+1 | Patron 1 | Address 1 | phone_1 | GOOD | 0 | 0 |
+2 | Patron 2 | Address 2 | phone_2 | BAD | 5 | 0 |
+3 | Patron 3 | Address 3 | phone_3 | GOOD | 0 | 1 |
+4 | Patron 4 | Address 4 | phone_4 | GOOD | 0 | 1 |
+5 | Patron 5 | Address 5 | phone_5 | GOOD | 0 | 1 |
+6 | Patron 6 | Address 6 | phone_6 | GOOD | 0 | 0 |
+7 | Patron 7 | Address 7 | phone_7 | GOOD | 0 | 0 |
+8 | Patron 8 | Address 8 | phone_8 | GOOD | 0 | 0 |
+9 | Patron 9 | Address 9 | phone_9 | GOOD | 0 | 0 |
+
+5
+ID | Title | Publisher | Status | Cost |
+1 | Book 1 | Publisher 1 | LOST | 100 |
+2 | Book 2 | Publisher 2 | LOST | 20 |
+3 | Book 3 | Publisher 3 | OUT | 30 |
+4 | Book 4 | Publisher 4 | OUT | 40 |
+5 | Book 5 | Publisher 5 | OUT | 50 |
+
+3
+Transaction_ID | Book_ID | Patron_ID | Due Date | Renewable? |
+3 | 3 | 3 | 1492373083 | 0 |
+4 | 4 | 4 | 1491163483 | 1 |
+5 | 5 | 5 | 1492373083 | 0 |

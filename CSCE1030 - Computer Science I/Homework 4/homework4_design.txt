@@ -1,0 +1,33 @@
+1. print student info using function
+2. Determine whether we're encrypting or decrypting
+3. set the boolean to the corresponding choice
+4. prompt for input filename
+5. prompt for output filename
+6. If there are no errors, then process the files and continue with the encryption using a function.
+
+void print_student_info();
+  prints my info
+
+void process(ifstream& fin, ofstream& fout, bool is_encrypting)
+  get every character in the file
+    if its not a blank
+
+      if its a letter
+        if its uppercase
+          if we're encrypting
+            encrypt the capital letter
+          else (decrypting)
+            decrypt the capital letter
+
+        if lowercase
+          if we're encrypting
+            encrypt the lower letter
+          else
+            decrypt the lower letter
+
+    if a letter was changed, move to the next letter of the key
+    if we're at the end of the key, go back to the beginning
+
+
+  always write the letter to the file.
+  note that if the letter is blank, no action is performed and the space is just written

@@ -1,0 +1,27 @@
+3
+Patron ID | Name | Address | Phone | Status | Fine Balance | Num Books | Num AVs |
+1 | 1 | 1 | 1 | GOOD | 0.000000 | 1 | 0 |
+2 | 2 | 2 | 2 | GOOD | 0.000000 | 0 | 1 |
+3 | 3 | 3 | 3 | GOOD | 0.000000 | 0 | 1 |
+
+1
+Book ID | Status | Loan Period | Fine Rate | Replacement Cost | Renewable | Borrowable | Title | Author | Publisher |
+1 | OUT | 1209600 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+
+1
+CD ID | Status | Loan Period | Fine Rate | Replacement Cost | Renewable | Borrowable | Artist | Label |
+2 | OUT | 172800 | 1 | 1 | 0 | 1 | 1 | 1 |
+
+1
+DVD ID | Status | Loan Period | Fine Rate | Replacement Cost | Renewable | Borrowable | Title | Production Studio | Duration |
+3 | OUT | 172800 | 1 | 1 | 0 | 1 | 1 | 1 | 1 |
+
+1
+Reference ID | Status | Loan Period | Fine Rate | Replacement Cost | Renewable | Borrowable | Title | Author | Editor | Publisher |
+4 | IN | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 |
+
+3
+Transaction ID | Patron ID | Item ID | Due | Renewable |
+1 | 1 | 1 | 1494989454 | 0 |
+2 | 2 | 2 | 1492743056 | 0 |
+3 | 3 | 3 | 1492743058 | 0 |

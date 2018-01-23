@@ -1,0 +1,177 @@
+patron:
+  simple get/set
+  set num borrowed
+    if patron has 5 books, set status to blocked
+    else if patron has no fines, set status to good
+
+  add fine
+    if patron's fines are above 0, status is bad
+
+  add book cost
+    if patron's fines are above 0, status is bad
+
+  pay fine
+    if patron's fines are not above 0, status is GOOD,
+    but only if he has less than 5 books checked out
+
+book:
+  simple get/set
+
+borrow:
+  simple get/set
+
+patrons:
+  simple get/set
+
+  patron constructor:
+    initialize head, tail to null and count to 0
+
+  patrons destructor:
+    loop through linked list and deallocates all patrons
+
+  print mailing labels:
+    loop through list and print name then addresses
+
+  print fines:
+    loop through list and print info of patrons with fines > 0
+
+  add patron:
+    prompt the user for patron attributes, create a patron, then add to linked list
+
+  add patron (patron*):
+    add patron obj to linked list
+
+  remove patron:
+    find the patron and manipulates the prev and next variables in the list to remove it.
+
+  edit patrons
+    prompt for id,find the patron, use setters to set new attributes
+
+  find patron:
+    loop though list and return patron with matching id, else null
+
+books:
+  simple get/set
+
+  book constructor:
+    initialize head, tail to null and count to 0
+
+  books destructor:
+    loop through linked list and deallocates all books
+
+  add book:
+    prompt the user for book attributes,
+    create a book,
+    then add to linked list
+
+  add book (book*):
+    add book obj to linked list
+
+  remove book:
+    find the book and manipulates the prev and next variables in the list to remove it.
+
+  edit books
+    prompt for id,
+    find the book,
+    use setters to set new attributes
+
+  find book:
+    loop though list and return book with matching id, else null
+
+  lose book:
+    if librarian is losing the book, set status to lost
+
+    else patron is losing the book.
+      add fine to patron
+      set status of book to lost
+      reduce the num borrowed by one of patron
+      delete transaction between lost book and patron
+
+borrows:
+  simple get/set
+
+  borrow constructor:
+    initialize head, tail to null and count to 0
+
+  borrows destructor:
+    loop through linked list and deallocates all borrows
+
+  check out:
+    prompt the user for bookid, patronid.
+    generate a due date 2 weeks from the current date
+    add the transaction object to the linked list
+    add one to the patron num borrowed
+    set status of book to OUT
+
+  add borrow (borrow*):
+    add borrow obj to linked list
+
+  check in:
+    delete the borrow obj from the list
+    subtract one from patrons numborrowed
+    set status of book to IN
+
+  find borrow:
+    loop though list and return borrow with matching pid and bids, else null
+
+  print overdue patrons:
+    loop through list and check if any books are overdue.
+      print the patron who own the overdue book
+
+  print patron books:
+    loop through list and print out the book info if the patron id matches
+
+  print overdue:
+    loop though list and print book info if due dat is past the current date
+
+main:
+  create object controllers.
+  create menu
+
+  while user still wants to continue
+    print menu
+    calculate fines of overdue books if it has been one day
+    prompt for choice
+    switch choice.
+      call appropriate function for each choice
+
+
+  load:
+    prompt for filename
+    read from file:
+
+    read number of patrons
+    skip first line
+    for number of patrons
+      read attributes
+      create patron obj and add it to list
+
+    read number of books
+    skip first line
+    for number of books
+      read attributes
+      create book obj and add it to list
+
+    read number of borrows
+    skip first line
+    for number of borrows
+      read attributes
+      create borrow obj and add it to list
+
+  store:
+    prompt for filename
+    write to file:
+      print number of patrons
+      print column headers
+      loop through all of patrons and write information
+      print new line
+
+      print number of books
+      print column headers
+      loop through all of books and write information
+      print new line
+
+      print number of borrows
+      print column headers
+      loop through all of borrows and write information
+      print new line
